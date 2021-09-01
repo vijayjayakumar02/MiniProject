@@ -7,9 +7,8 @@ using TastyDots.Models;
 
 namespace TastyDots.DataAccess.Repository
 {
-    public interface IMenuRepository: IGenericRepository<Menu>
+    interface IOrderRepository: IGenericRepository<Order>
     {
-        void Update(Menu menu);
-
+        
     }
 }

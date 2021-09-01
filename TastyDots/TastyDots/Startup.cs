@@ -43,7 +43,6 @@ namespace TastyDots
 
 
             services.AddScoped<IUnitofWork, UnitofWork>();
-            services.AddScoped<IMenuRepository, MenuRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

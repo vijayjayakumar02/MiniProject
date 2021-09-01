@@ -7,9 +7,9 @@ using TastyDots.Models;
 
 namespace TastyDots.DataAccess.Repository
 {
-    class MenuRepository : IMenuRepository
+    class OrderRepository : IOrderRepository
     {
-        public void Delete(Menu entity)
+        public void Delete(Order entity)
         {
             throw new NotImplementedException();
         }
@@ -19,22 +19,17 @@ namespace TastyDots.DataAccess.Repository
             throw new NotImplementedException();
         }
 
-        public Menu Get(int T)
+        public Order Get(int T)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Menu> GetAll()
+        public IEnumerable<Order> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Task Insert(Menu entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Menu menu)
+        public Task Insert(Order entity)
         {
             throw new NotImplementedException();
         }
