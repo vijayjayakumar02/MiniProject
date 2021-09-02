@@ -2,4 +2,33 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Title"] = "MenuList";
 }
+@model IEnumerable<Menu>
+
+<div class="row justify-content-center mt-3">
+    <div class="col-12">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col" width="10%">DishId</th>
+                    <th scope="col" width="20%">DishName</th>
+                    <th scope="col" width="10%">Category</th>
+                    <th scope="col" width="10%">Price</th>
+                    <th scope="col" width="10%">In Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dish in Model)
+                {
+                    <tr>
+                        <td>@dish.DishId</td>
+                        <td>@dish.DishName</td>
+                        <td>@dish.Category</td>
+                        <td>@dish.Stock</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

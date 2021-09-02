@@ -390,3 +390,8 @@ D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\TastyDots.dll
 D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\ref\TastyDots.dll
 D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\TastyDots.pdb
 D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\TastyDots.genruntimeconfig.cache
+D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
+D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Account\LogIn.cshtml.g.cs
+D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Admin\Create.cshtml.g.cs

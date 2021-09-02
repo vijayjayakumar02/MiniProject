@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Index";
+}
+@model IEnumerable<Menu>
+
+
+<div class="row justify-content-end">
+    <div class="col-4 col-sm-4">
+        <h2>Dish Details</h2>
+    </div>
+    <div class="col-2 col-sm-6">
+    </div>
+    <div class="col-4 col-sm-2">
+        <a class="btn btn-primary text-white" asp-action="Create"><i class="fas fa-plus"></i> Add Dish</a>
+    </div>
+</div>
+
+
+<div class="row justify-content-center mt-3">
+    <div class="col-12">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col" width="10%">DishId</th>
+                    <th scope="col" width="20%">DishName</th>
+                    <th scope="col" width="10%">Category</th>
+                    <th scope="col" width="10%">Price</th>
+                    <th scope="col" width="10%">In Stock</th>
+                    <th scope="col" width="30%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dish in Model)
+                {
+                    <tr>
+                        <td>@dish.DishId</td>
+                        <td>@dish.DishName</td>
+                        <td>@dish.Category</td>
+                        <td>@dish.Price</td>
+                        <td>@dish.Stock</td>
+                        <td>
+                            <a asp-action="Update" asp-route-id="@dish.DishId" class="btn btn-warning ml-3"><i class="fas fa-edit"></i> Edit</a>
+                            <a asp-action="Delete" asp-route-id="@dish.DishId" class="btn btn-danger ml-3"
+                               onclick="return confirm('Are you Sure to delete the book')"><i class="fas fa-trash"></i> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -3,20 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TastyDots.DataAccess.Data;
 using TastyDots.Models;
 
 namespace TastyDots.DataAccess.Repository
 {
     class OrderRepository : IOrderRepository
     {
+        private readonly AppDbContext _dbObj;
+        public OrderRepository(AppDbContext dbObj)
+        {
+            this._dbObj = dbObj;
+        }
         public void Delete(Order entity)
         {
-            throw new NotImplementedException();
+            _dbObj.Remove(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var entity = _dbObj.FindAsync<Order>(id);
+            _dbObj.Remove(entity);
         }
 
         public Order Get(int T)
@@ -26,12 +33,12 @@ namespace TastyDots.DataAccess.Repository
 
         public IEnumerable<Order> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbObj.Set<Order>().ToList();
         }
 
-        public Task Insert(Order entity)
+        public async Task Insert(Order entity)
         {
-            throw new NotImplementedException();
+            await _dbObj.AddAsync<Order>(entity);
         }
     }
 }

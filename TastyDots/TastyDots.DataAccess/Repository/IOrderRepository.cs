@@ -9,6 +9,6 @@ namespace TastyDots.DataAccess.Repository
 {
     interface IOrderRepository: IGenericRepository<Order>
     {
-        
+
     }
 }
