@@ -395,3 +395,4 @@ D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Account
 D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Admin\Create.cshtml.g.cs
+D:\Training\MiniProject\TastyDots\TastyDots\obj\Debug\net5.0\Razor\Views\Admin\Update.cshtml.g.cs

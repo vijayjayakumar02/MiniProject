@@ -16,5 +16,6 @@ namespace TastyDots.DataAccess.Repository
 
         void Delete(T entity);
         void Delete(int id);
+        void Update(T entity);
     }
 }

@@ -40,5 +40,10 @@ namespace TastyDots.DataAccess.Repository
         {
             await _dbObj.AddAsync<Order>(entity);
         }
+
+        public void Update(Order entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

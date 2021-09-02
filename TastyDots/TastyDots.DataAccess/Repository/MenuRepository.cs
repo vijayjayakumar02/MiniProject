@@ -41,10 +41,9 @@ namespace TastyDots.DataAccess.Repository
             await _dbObj.AddAsync<Menu>(entity);
         }
 
-        public void Update(Menu menu)
+        public void Update(Menu entity)
         {
             throw new NotImplementedException();
         }
-
     }
 }

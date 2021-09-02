@@ -12,7 +12,6 @@ namespace TastyDots.Controllers
     public class AdminController : Controller
     {
         private readonly IUnitofWork _menu;
-
         public AdminController(IUnitofWork menu)
         {
             this._menu = menu;
@@ -42,6 +41,47 @@ namespace TastyDots.Controllers
             }
 
             return View(item);
+        }
+
+        public IActionResult Update(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var dish = _menu.MenuList.Get((int)id);
+            if (dish == null)
+            {
+                return NotFound();
+            }
+
+            return View(dish);
+
+        }
+
+        [HttpPost]
+        public IActionResult Update(Menu dish)
+        {
+            if (ModelState.IsValid)
+            {
+                var myDish = _menu.MenuList.Get(dish.DishId);
+
+                if (myDish != null)
+                {
+                    myDish.DishId = dish.DishId;
+                    myDish.DishName = dish.DishName;
+                    myDish.Category = dish.Category;
+                    myDish.Price = dish.Price;
+                    myDish.Stock = myDish.Stock + dish.Stock;
+                }
+                _menu.MenuList.Update(myDish);
+                _menu.Save();
+                return RedirectToAction("Index");
+            }
+
+            return View(dish);
+
         }
 
         public IActionResult Delete(int? id)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TastyDots.DataAccess.Data;
+using TastyDots.Models;
 
 namespace TastyDots.DataAccess.Repository
 {
@@ -39,6 +40,11 @@ namespace TastyDots.DataAccess.Repository
         public async Task Insert(T entity)
         {
             await _dbObj.AddAsync(entity);
+        }
+
+        public void Update(T entity)
+        {
+             _dbObj.Update(entity);
         }
     }
 }

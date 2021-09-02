@@ -9,7 +9,6 @@ namespace TastyDots.DataAccess.Repository
 {
     public interface IMenuRepository: IGenericRepository<Menu>
     {
-        void Update(Menu menu);
 
     }
 }
