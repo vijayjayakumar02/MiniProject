@@ -13,6 +13,7 @@ namespace TastyDots.DataAccess.Repository
         private readonly AppDbContext _dbObj;
         private IGenericRepository<Menu> _menuList;
         private IGenericRepository<Order> _orders;
+        private IGenericRepository<Cart> _itemList;
 
 
         public UnitofWork( AppDbContext dbObj)
@@ -23,6 +24,8 @@ namespace TastyDots.DataAccess.Repository
         public IGenericRepository<Menu> MenuList => _menuList ??=new GenericRepository<Menu>(_dbObj);
 
         public IGenericRepository<Order> Orders => _orders ??= new GenericRepository<Order>(_dbObj);
+
+        public IGenericRepository<Cart> ItemList => _itemList ??= new GenericRepository<Cart>(_dbObj);
 
         public void Dispose()
         {

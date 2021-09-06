@@ -38,7 +38,7 @@
     <div class="row justify-content-center">
         <div class="col-4 col-sm-2">
             <a class="btn btn-success mt-3 text-white" id="pri" asp-action="AddItem" asp-route-Id="@dish.DishId">Ad</a>
-            <a class="btn btn-success mt-3 text-white" onclick="updatePrice(@dish.Price, document.getElementById('qnty').value)">Add</a>
+            @*<a class="btn btn-success mt-3 text-white" onclick="updatePrice(@dish.Price, document.getElementById('qnty').value)">Add</a>*@
         </div>
     </div>
 }
@@ -69,7 +69,7 @@
                 alert(result.foo + result.ball);
             }
         });
-    };
+    });
     </script>
 }
 

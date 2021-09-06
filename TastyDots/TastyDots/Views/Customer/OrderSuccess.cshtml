@@ -38,6 +38,17 @@
         </div>
         <div class="row">
             <div class="col-12 col-sm-6">
+                <h1 class="text-center">Dishes: </h1>
+            </div>
+            @foreach (var item in Model.Item)
+            {
+                <div class="col-12 col-sm-6">
+                    <h2 class="text-center">@item.Dish</h2>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
                 <h1 class="text-center">Total Cost: </h1>
             </div>
             <div class="col-12 col-sm-6">

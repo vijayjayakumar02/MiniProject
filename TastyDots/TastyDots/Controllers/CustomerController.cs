@@ -57,30 +57,49 @@ namespace TastyDots.Controllers
         [HttpPost]
         public IActionResult PlaceOrder(OrderDetails order)
         {
+            ICollection<Cart> items = (ICollection<Cart>)_menu.ItemList.GetAll();
+
             Order ord = new Order
             {
                 CustomerName = order.Name,
                 MobileNo = order.PhoneNumber,
+                Item= items,
                 TotalCost = _tempPrice
             };
 
             _menu.Orders.Insert(ord);
             _menu.Save();
+            foreach (var item in items)
+            {
+                _menu.ItemList.Delete(item.CartId);
+
+            }
+
 
             return View("OrderSuccess",ord);
         }
 
         public IActionResult OrderSuccess()
         {
+            //ViewBag.item = items;
             return View();
         }
 
-        private IList<Menu> _itemList;
+        //private List<Menu> _itemList;
         public IActionResult AddItem(int id)
         {
             var dish = _menu.MenuList.Get(id);
 
-            _itemList.Add(dish);
+            Cart item = new Cart
+            {
+                Dish = dish.DishName,
+                Price = dish.Price,
+
+            };
+
+            _menu.ItemList.Insert(item);
+            _menu.Save();
+            //_itemList.Add(dish);
 
             return RedirectToAction("Index");
         }

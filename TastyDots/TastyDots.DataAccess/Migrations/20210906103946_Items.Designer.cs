@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TastyDots.DataAccess.Data;
 
 namespace TastyDots.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210906103946_Items")]
+    partial class Items
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -225,9 +227,6 @@ namespace TastyDots.DataAccess.Migrations
                     b.Property<string>("Dish")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OrderId")
-                        .HasColumnType("int");
-
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
@@ -235,8 +234,6 @@ namespace TastyDots.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CartId");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("cartItems");
                 });
@@ -260,6 +257,9 @@ namespace TastyDots.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("int");
+
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
@@ -267,6 +267,8 @@ namespace TastyDots.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("DishId");
+
+                    b.HasIndex("OrderId");
 
                     b.ToTable("MenuList");
                 });
@@ -344,7 +346,7 @@ namespace TastyDots.DataAccess.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TastyDots.Models.Cart", b =>
+            modelBuilder.Entity("TastyDots.Models.Menu", b =>
                 {
                     b.HasOne("TastyDots.Models.Order", null)
                         .WithMany("Item")

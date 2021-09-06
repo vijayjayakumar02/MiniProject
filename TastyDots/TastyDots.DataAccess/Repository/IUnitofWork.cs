@@ -12,6 +12,8 @@ namespace TastyDots.DataAccess.Repository
         IGenericRepository<Menu> MenuList { get; }
         IGenericRepository<Order> Orders { get; }
 
+        IGenericRepository<Cart> ItemList { get; }
+
 
         void Save();
     }

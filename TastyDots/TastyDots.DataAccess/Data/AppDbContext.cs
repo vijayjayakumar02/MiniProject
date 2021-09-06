@@ -19,5 +19,7 @@ namespace TastyDots.DataAccess.Data
         public DbSet<Menu> MenuList { get; set; }
 
         public DbSet<Order> Orders { get; set; }
+
+        public DbSet<Cart> cartItems { get; set; }
     }
 }
