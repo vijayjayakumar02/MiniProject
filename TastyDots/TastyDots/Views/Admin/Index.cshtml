@@ -29,6 +29,7 @@
                     <th scope="col" width="10%">Category</th>
                     <th scope="col" width="10%">Price</th>
                     <th scope="col" width="10%">In Stock</th>
+                    <th scope="col">Picture</th>
                     <th scope="col" width="30%">Action</th>
                 </tr>
             </thead>
@@ -41,6 +42,12 @@
                         <td>@dish.Category</td>
                         <td>@dish.Price</td>
                         <td>@dish.Stock</td>
+                        <td>
+                            <img src="~/images/@dish.Image"
+                                 class="img"
+                                 width="100"
+                                 asp-append-version="true" />
+                        </td>
                         <td>
                             <a asp-action="Update" asp-route-id="@dish.DishId" class="btn btn-warning ml-3"><i class="fas fa-edit"></i> Edit</a>
                             <a asp-action="Delete" asp-route-id="@dish.DishId" class="btn btn-danger ml-3"

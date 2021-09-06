@@ -16,6 +16,7 @@ namespace TastyDots.Models
         public string CustomerName { get; set; }
 
         [Required(ErrorMessage = "Mobile Number is required to place the order")]
+        [Phone (ErrorMessage ="Enter the valid phone number")]
         public double MobileNo { get; set; }
         public ICollection<Menu> Item { get; set; }
         public double TotalCost { get; set; }

@@ -5,10 +5,10 @@
     ViewData["Title"] = "Add Dish";
 }
 
-@model TastyDots.Models.Menu
+@model TastyDots.Models.ViewModel.MenuViewModel
 
 
-<form method="post" asp-action="Create">
+<form method="post" enctype="multipart/form-data" asp-action="Create">
 
     <div class="row g-3 justify-content-center mt-3 align-items-center">
         <div class="col-4 col-sm-2">
@@ -63,11 +63,24 @@
         <span asp-validation-for="Stock" class="text-danger"></span>
     </div>
 
-
+    <div class="row g-3 justify-content-center mt-3 align-items-center">
+        <div class="col-4 col-sm-2">
+            <label for="stock" class="col-form-label" asp-for="DishImage"></label>
+        </div>
+        <div class="col-6 col-sm-4">
+            <div class="custom-file">
+                <input asp-for="DishImage" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+        </div>
+    </div>
+    <div class="row offset-6">
+        <span asp-validation-for="DishImage" class="text-danger"></span>
+    </div>
 
     <div class="row g-3 justify-content-center mt-3 align-items-end">
         <div class="col-auto">
-            <input type="submit" class="btn btn-info" onclick="updatemark()">
+            <input type="submit" value="submit" class="btn btn-info">
         </div>
         <div class="col-auto">
             <a asp-action="Index" class="btn btn-danger">Back</a>

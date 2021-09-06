@@ -1,20 +1,27 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using TastyDots.DataAccess.Repository;
 using TastyDots.Models;
+using TastyDots.Models.ViewModel;
+
 
 namespace TastyDots.Controllers
 {
     public class AdminController : Controller
     {
         private readonly IUnitofWork _menu;
-        public AdminController(IUnitofWork menu)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public AdminController(IUnitofWork menu, IWebHostEnvironment hostEnvironment)
         {
             this._menu = menu;
+            this._webHostEnvironment = hostEnvironment;
         }
 
         [Authorize]
@@ -30,17 +37,46 @@ namespace TastyDots.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Menu item)
+        public IActionResult Create(MenuViewModel item)
         {
             if (ModelState.IsValid)
             {
-                _menu.MenuList.Insert(item);
+                string uniqueFileName = UploadedFile(item);
+
+                Menu dish = new Menu
+                {
+                    DishId = item.DishId,
+                    DishName = item.DishName,
+                    Category = item.Category,
+                    Price = item.Price,
+                    Stock = item.Stock,
+                    Image = uniqueFileName
+                };
+
+                _menu.MenuList.Insert(dish);
                 _menu.Save();
 
                 return RedirectToAction("Index");
             }
 
             return View(item);
+        }
+
+        private string UploadedFile(MenuViewModel model)
+        {
+            string uniqueFileName = null;
+
+            if (model.DishImage != null)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.DishImage.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.DishImage.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
         }
 
         public IActionResult Update(int? id)

@@ -23,5 +23,8 @@ namespace TastyDots.Models
 
         [Display(Name ="In Stock")]
         public int Stock { get; set; }
+
+        [Required(ErrorMessage = "Image is a Required")]
+        public string Image { get; set; }
     }
 }
