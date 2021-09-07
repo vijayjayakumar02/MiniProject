@@ -24,7 +24,7 @@ namespace Blog.Controllers
 
         //Get Blogs
         [HttpGet]
-        [Route("AllEmployeeDetails")]   
+        [Route("AllBlogDetails")]   
         public IList<Blogs> GetAllBlogs()
         {
             IList<Blogs> blogs = _db.Blogs.GetAll().ToList();
