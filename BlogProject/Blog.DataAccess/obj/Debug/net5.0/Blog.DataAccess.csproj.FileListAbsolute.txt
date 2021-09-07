@@ -1,0 +1,15 @@
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\bin\Debug\net5.0\Blog.DataAccess.deps.json
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\bin\Debug\net5.0\Blog.DataAccess.dll
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\bin\Debug\net5.0\ref\Blog.DataAccess.dll
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\bin\Debug\net5.0\Blog.DataAccess.pdb
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\bin\Debug\net5.0\Blog.Models.dll
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\bin\Debug\net5.0\Blog.Models.pdb
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.csproj.AssemblyReference.cache
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.AssemblyInfoInputs.cache
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.AssemblyInfo.cs
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.csproj.CoreCompileInputs.cache
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.csproj.CopyComplete
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.dll
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\ref\Blog.DataAccess.dll
+D:\Training\MiniProject\BlogProject\Blog.DataAccess\obj\Debug\net5.0\Blog.DataAccess.pdb

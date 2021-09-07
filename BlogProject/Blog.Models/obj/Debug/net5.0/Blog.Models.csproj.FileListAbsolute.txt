@@ -1,0 +1,12 @@
+D:\Training\MiniProject\BlogProject\Blog.Models\bin\Debug\net5.0\Blog.Models.deps.json
+D:\Training\MiniProject\BlogProject\Blog.Models\bin\Debug\net5.0\Blog.Models.dll
+D:\Training\MiniProject\BlogProject\Blog.Models\bin\Debug\net5.0\ref\Blog.Models.dll
+D:\Training\MiniProject\BlogProject\Blog.Models\bin\Debug\net5.0\Blog.Models.pdb
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\Blog.Models.csproj.AssemblyReference.cache
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\Blog.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\Blog.Models.AssemblyInfoInputs.cache
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\Blog.Models.AssemblyInfo.cs
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\Blog.Models.csproj.CoreCompileInputs.cache
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\Blog.Models.dll
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\ref\Blog.Models.dll
+D:\Training\MiniProject\BlogProject\Blog.Models\obj\Debug\net5.0\Blog.Models.pdb
