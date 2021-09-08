@@ -1,11 +1,24 @@
-<div class="row justify-content-start">
+<div *ngFor="let blog of service.list">
+    <div *ngIf="blog.blogId == service.id">
+        <div class="row header">
+            <h1 class="text-center">{{blog.blogTitle}}</h1>
+        </div>
+        <div class="row">
+            <p>{{blog.blogContent}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="row justify-content-start">
     <div class="col-sm-8">
-        <h1>{{title}}</h1>
+        <h1>{{blog}}</h1>
     </div>
 </div>
 <div class="row justify-content-start">
     <div class="col-sm-8">
-        <p>{{content}}</p>
+        <p>{{blog}}</p>
         <a class="btn btn-primary" (click)="dis()">Data</a>
     </div>
-</div>
+</div> -->

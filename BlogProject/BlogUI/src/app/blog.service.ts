@@ -9,7 +9,6 @@ export class BlogService {
 
   formData: Blog = new Blog();
   readonly baseURL = 'https://localhost:44330/Blog';
-  list: {blogId: number, blogTitle: string, blogContent: string}[];
 
   constructor(private http: HttpClient) { }
 
@@ -28,21 +27,38 @@ export class BlogService {
     return this.http.delete(`${this.baseURL}/${id}`);
   }
 
-   temp: any;
+  //  temp: {blogId: number, blogTitle: string, blogContent: string}[];
+  list: {blogId: number, blogTitle: string, blogContent: string}[]=[];
   refreshList()
   {
     this.http.get(this.baseURL)
     .subscribe(Response => {
-      // this.temp = Object.values(Response);
-      this.temp = Response;
-      this.list = this.temp.list;
-      this.list = (this.temp[0]);
-      console.log(this.list);
-    })
+      this.list = Object.values(Response);
+      console.log("res");
+      console.log(this.list[0]);
+      return this.list[0];
+      });
+      //this.temp.forEach(b => { this.list.push(b);
+      // this.temp = Response;
+      // this.list = this.temp.list;
+      // this.list = (this.temp[0]);
+    }
+
+    id: number = 2;
+    onSetId(id: number)
+    {
+      this.id = id; 
+    }
+
+    // initBlog()
+    // {
+    //   console.log("BlogService");
+    //   return this.list[0];
+    // }
 
 
-  };
-  }
+};
+
 
   // refreshList() {
   //   this.http.get(this.baseURL)

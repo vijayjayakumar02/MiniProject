@@ -10,12 +10,16 @@ import { BlogService } from '../blog.service';
 export class BlogComponent implements OnInit {
 
   constructor(public service: BlogService) { }
-  title: any;
-  content: any;
+  // blog: any;
+
   ngOnInit(): void {
+    // this.service.refreshList();
+    // // this.blog = this.service.list[0];
+    // console.log("Blog")
+    // // console.log(this.blog)
   }
 
   dis(){
-    console.log(this.service.list)
+    console.log(this.service.list[0])
   }
 }

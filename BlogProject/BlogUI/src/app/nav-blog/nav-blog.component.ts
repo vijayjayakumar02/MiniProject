@@ -19,4 +19,9 @@ export class NavBlogComponent implements OnInit {
 
   }
 
+  onBlog(id: number)
+  {
+    this.service.onSetId(id);
+  }
+
 }
