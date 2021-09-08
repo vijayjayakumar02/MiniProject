@@ -13,7 +13,7 @@ namespace Blog.Models
         public int BlogId { get; set; }
 
         [Required(ErrorMessage ="Bolg Title is required")]
-        [MaxLength(30,ErrorMessage ="Blog Title can have maximum of 30 characters")]
+        [MaxLength(100,ErrorMessage ="Blog Title can have maximum of 100 characters")]
         public string BlogTitle { get; set; }
 
         [Required(ErrorMessage = "Bolg Content is required")]

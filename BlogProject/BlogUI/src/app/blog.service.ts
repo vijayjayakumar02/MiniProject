@@ -9,7 +9,7 @@ export class BlogService {
 
   formData: Blog = new Blog();
   readonly baseURL = 'https://localhost:44330/Blog';
-  list: Blog[]=[];
+  list: {blogId: number, blogTitle: string, blogContent: string}[];
 
   constructor(private http: HttpClient) { }
 
@@ -28,10 +28,26 @@ export class BlogService {
     return this.http.delete(`${this.baseURL}/${id}`);
   }
 
+   temp: any;
   refreshList()
   {
     this.http.get(this.baseURL)
-    .toPromise()
-    .then(res => this.list = res as Blog[]);
+    .subscribe(Response => {
+      // this.temp = Object.values(Response);
+      this.temp = Response;
+      this.list = this.temp.list;
+      this.list = (this.temp[0]);
+      console.log(this.list);
+    })
+
+
+  };
   }
-}
+
+  // refreshList() {
+  //   this.http.get(this.baseURL)
+  //     .toPromise()
+  //     .then(res =>this.list = res as Blog[]);
+  //     console.log(this.list)
+  // }
+

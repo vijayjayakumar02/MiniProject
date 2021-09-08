@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../blog.service';
+import { Blog } from '../blog';
 
 @Component({
   selector: 'app-nav-blog',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBlogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: BlogService, private http: HttpClient) { }
+
 
   ngOnInit(): void {
+    this.service.refreshList();
+    // console.log("Nav "+this.service.temp)
+
   }
 
 }
