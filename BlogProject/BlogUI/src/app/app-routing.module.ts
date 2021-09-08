@@ -7,6 +7,7 @@ import { EditBlogComponent } from './edit-blog/edit-blog.component';
 import { NavBlogComponent } from './nav-blog/nav-blog.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'nav-blog', pathMatch: 'full' },
   {path: 'blog', component: BlogComponent},
   {path: 'comment', component: CommentComponent},
   {path: 'add-blog', component: AddBlogComponent},

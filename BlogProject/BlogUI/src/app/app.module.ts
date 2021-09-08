@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddBlogComponent } from './add-blog/add-blog.component';
 import { EditBlogComponent } from './edit-blog/edit-blog.component';
 import { NavBlogComponent } from './nav-blog/nav-blog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavBlogComponent } from './nav-blog/nav-blog.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
