@@ -1,7 +1,5 @@
 export class Blog {
-    constructor(
-        BlogId: number,
-        BlogTitle: string,
-        BlogContent: string
-    ){}
+    BlogId: number=0;
+    BlogTitle: string='';
+    BlogContent: string='';
 }

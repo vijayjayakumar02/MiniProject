@@ -5,16 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
 import { CommentComponent } from './comment/comment.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddBlogComponent } from './add-blog/add-blog.component';
+import { EditBlogComponent } from './edit-blog/edit-blog.component';
+import { NavBlogComponent } from './nav-blog/nav-blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
-    CommentComponent
+    CommentComponent,
+    AddBlogComponent,
+    EditBlogComponent,
+    NavBlogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,10 @@
+using Blog.DataAccess.Data;
+using Blog.DataAccess.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,6 +35,11 @@ namespace Blog
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Blog", Version = "v1" });
             });
+
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
+                Configuration.GetConnectionString("BlogConnection")));
+
+            services.AddScoped<IUnitofWork, UnitofWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

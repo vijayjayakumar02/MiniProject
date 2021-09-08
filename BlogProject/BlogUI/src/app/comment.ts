@@ -1,6 +1,4 @@
 export class Comment {
-    constructor(
-        public CommentId: number,
-        Cmt: string
-    ){}
+    CommentId: number=0;
+    Cmt: string='';
 }

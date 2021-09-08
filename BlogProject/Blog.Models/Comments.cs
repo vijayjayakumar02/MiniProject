@@ -9,6 +9,7 @@ namespace Blog.Models
 {
     public class Comments
     {
+        [Key]
         public int CommentId { get; set; }
 
         [Required(ErrorMessage ="Content is Required")]

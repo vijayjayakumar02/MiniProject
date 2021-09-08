@@ -9,6 +9,7 @@ namespace Blog.Models
 {
     public class Blogs
     {
+        [Key]
         public int BlogId { get; set; }
 
         [Required(ErrorMessage ="Bolg Title is required")]
@@ -17,5 +18,7 @@ namespace Blog.Models
 
         [Required(ErrorMessage = "Bolg Content is required")]
         public string BlogContent { get; set; }
+
+        public ICollection<Comments> Comment { get; set; }
     }
 }
