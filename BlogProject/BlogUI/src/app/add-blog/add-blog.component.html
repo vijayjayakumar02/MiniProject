@@ -6,13 +6,13 @@
             #blogTitle="ngModel" [(ngModel)]="service.formData.BlogTitle"
             required maxlength="100" [class.invalid]="blogTitle.invalid &#038;&#038; blogTitle.touched">
     </div>
-    <div class="form-group">
+    <div class="form-group mt-3">
         <label>Content</label>
         <textarea class="form-control form-control-lg" placeholder="Contents..." name="cardNumber"
             #blogContent="ngModel" [(ngModel)]="service.formData.BlogContent"
             required  [class.invalid]="blogContent.invalid &#038;&#038; blogContent.touched"></textarea>
     </div>
-    <div class="form-group">
+    <div class="form-group mt-4">
         <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
     </div>
 </form>

@@ -19,7 +19,4 @@ export class BlogComponent implements OnInit {
     // // console.log(this.blog)
   }
 
-  dis(){
-    console.log(this.service.list[0])
-  }
 }

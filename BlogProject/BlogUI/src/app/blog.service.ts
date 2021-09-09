@@ -19,7 +19,7 @@ export class BlogService {
 
   putBlog()
   {
-    return this.http.put(`${this.baseURL}/${this.formData.BlogId}`,this.formData);
+    return this.http.put(this.baseURL,this.formData);
   }
 
   deleteBlog(id: number)

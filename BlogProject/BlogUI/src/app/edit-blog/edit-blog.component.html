@@ -1,1 +1,22 @@
-<p>edit-blog works!</p>
+<div *ngFor="let blog of service.list">
+    <div *ngIf="blog.blogId == service.id">
+        <form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+            <input type="hidden" name="bogId" [value]="service.formData.BlogId" />
+            <div class="form-group">
+                <label class="col-form-lable-lg">Blog Title</label>
+                <input class="form-control form-control-lg" name="blogTitle"
+                    #blogTitle="ngModel" [(ngModel)]="service.formData.BlogTitle"
+                    required maxlength="100" [class.invalid]="blogTitle.invalid &#038;&#038; blogTitle.touched">
+            </div>
+            <div class="form-group mt-3">
+                <label class="col-form-lable-lg">Content</label>
+                <textarea class="form-control form-control-lg" name="cardNumber"
+                    #blogContent="ngModel" [(ngModel)]="service.formData.BlogContent"
+                    required  [class.invalid]="blogContent.invalid &#038;&#038; blogContent.touched"></textarea>
+            </div>
+            <div class="form-group mt-4">
+                <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>
