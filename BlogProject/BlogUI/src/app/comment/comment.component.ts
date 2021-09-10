@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../service/blog.service';
+import { CommentService } from '../service/comment.service';
 
 @Component({
   selector: 'app-comment',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: BlogService) { }
 
   ngOnInit(): void {
+    this.service.refreshList();
+    console.log("Comments");
+    console.log(this.service.list); 
   }
 
 }

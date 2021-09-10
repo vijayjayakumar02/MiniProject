@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Blog } from './blog';
+import { Blog } from '../model/blog';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,8 @@ export class BlogService {
 
   putBlog()
   {
+    console.log("Put Works")
+    console.log(this.formData)
     return this.http.put(this.baseURL,this.formData);
   }
 
@@ -28,15 +30,13 @@ export class BlogService {
   }
 
   //  temp: {blogId: number, blogTitle: string, blogContent: string}[];
-  list: {blogId: number, blogTitle: string, blogContent: string}[]=[];
+  list: {blogId: number, blogTitle: string, blogContent: string, comment: {commentId: number, comment: string}[]}[]=[];
   refreshList()
   {
     this.http.get(this.baseURL)
     .subscribe(Response => {
       this.list = Object.values(Response);
-      console.log("res");
-      console.log(this.list[0]);
-      return this.list[0];
+      console.log(Response);
       });
       //this.temp.forEach(b => { this.list.push(b);
       // this.temp = Response;

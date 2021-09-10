@@ -19,6 +19,7 @@ namespace Blog.Models
         [Required(ErrorMessage = "Bolg Content is required")]
         public string BlogContent { get; set; }
 
+        [Display(Name ="Blog Id")]
         public ICollection<Comments> Comment { get; set; }
     }
 }

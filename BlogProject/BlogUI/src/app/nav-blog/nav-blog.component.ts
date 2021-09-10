@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from '../blog.service';
-import { Blog } from '../blog';
+import { BlogService } from '../service/blog.service';
+import { Blog } from '../model/blog';
 
 @Component({
   selector: 'app-nav-blog',

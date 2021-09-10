@@ -10,6 +10,7 @@ import { AddBlogComponent } from './add-blog/add-blog.component';
 import { EditBlogComponent } from './edit-blog/edit-blog.component';
 import { NavBlogComponent } from './nav-blog/nav-blog.component';
 import { FormsModule } from '@angular/forms';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     CommentComponent,
     AddBlogComponent,
     EditBlogComponent,
-    NavBlogComponent
+    NavBlogComponent,
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,

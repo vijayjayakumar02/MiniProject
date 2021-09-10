@@ -1,1 +1,9 @@
-<p>comment works!</p>
+<a class="btn btn-success mt-5" routerLink='../add-comment'>Drop Your Comment Here</a>
+
+<ul class="list-group mt-2" *ngFor="let blog of service.list">
+    <div *ngIf="blog.blogId == service.id">
+        <li class="list-group-item mb-sm-2 hover-cursor" *ngFor="let comment of blog.comment">
+            {{comment.comment}}
+        </li>
+    </div>
+</ul>

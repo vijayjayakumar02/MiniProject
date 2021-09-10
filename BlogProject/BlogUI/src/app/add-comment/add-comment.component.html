@@ -1,0 +1,11 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="bogId" [value]="service.formData.BlogId" />
+    <div class="form-group">
+        <label>Drop here</label>
+        <input class="form-control form-control-lg" placeholder="Comment..." name="comment"
+            required #comment>
+    </div>
+    <div class="form-group mt-4">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid" (click)="onComment(comment.value)">SUBMIT</button>
+    </div>
+</form>

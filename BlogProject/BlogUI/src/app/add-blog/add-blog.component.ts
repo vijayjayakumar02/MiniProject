@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from '../blog';
-import { BlogService } from '../blog.service';
+import { Blog } from '../model/blog';
+import { BlogService } from '../service/blog.service';
 import { NgForm } from '@angular/forms';
 
 @Component({

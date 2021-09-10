@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from '../blog.service';
+import { BlogService } from '../service/blog.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 

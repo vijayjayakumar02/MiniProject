@@ -69,12 +69,13 @@ namespace Blog.Controllers
                 throw new Exception("Invalid Data.");
             }
 
-            var existingBlog = _db.Blogs.Get(blog.BlogId);
+            Blogs existingBlog = _db.Blogs.Get(blog.BlogId);
 
             if (existingBlog != null)
             {
                 existingBlog.BlogTitle = blog.BlogTitle;
                 existingBlog.BlogContent = blog.BlogContent;
+                existingBlog.Comment = blog.Comment; 
 
                 _db.Save();
             }

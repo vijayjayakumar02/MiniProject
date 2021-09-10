@@ -1,4 +1,6 @@
 ﻿using Blog.DataAccess.Data;
+using Blog.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +40,14 @@ namespace Blog.DataAccess.Repository
 
         public IEnumerable<T> GetAll()
         {
-            return _dbObj.Set<T>().ToList();
+            try
+            {
+                return (IEnumerable<T>)_dbObj.Blogs.Include(b => b.Comment).ToList();
+            }
+            catch
+            {
+                return _dbObj.Set<T>().ToList();
+            }
         }
 
         public void Update(T entity)
