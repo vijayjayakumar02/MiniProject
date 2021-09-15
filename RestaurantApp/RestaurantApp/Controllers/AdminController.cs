@@ -6,12 +6,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using TastyDots.DataAccess.Repository;
-using TastyDots.Models;
-using TastyDots.Models.ViewModel;
+using RestaurantApp.DataAccess.Repository;
+using RestaurantApp.Models;
+using RestaurantApp.Models.ViewModel;
 
 
-namespace TastyDots.Controllers
+namespace RestaurantApp.Controllers
 {
     public class AdminController : Controller
     {
