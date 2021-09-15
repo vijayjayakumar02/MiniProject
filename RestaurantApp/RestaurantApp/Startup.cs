@@ -5,15 +5,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TastyDots.DataAccess.Data;
+using RestaurantApp.DataAccess.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using TastyDots.DataAccess.Repository;
+using RestaurantApp.DataAccess.Repository;
 
-namespace TastyDots
+namespace RestaurantApp
 {
     public class Startup
     {
