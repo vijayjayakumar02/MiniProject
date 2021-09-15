@@ -1,6 +1,6 @@
 using System;
 
-namespace TastyDots.Models
+namespace RestaurantApp.Models
 {
     public class ErrorViewModel
     {
