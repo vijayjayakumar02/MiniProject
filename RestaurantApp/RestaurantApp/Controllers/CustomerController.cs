@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using TastyDots.Models;
 using TastyDots.DataAccess.Repository;
 
-namespace TastyDots.Controllers
+namespace RestaurantApp.Controllers
 {
 
     public class CustomerController : Controller
