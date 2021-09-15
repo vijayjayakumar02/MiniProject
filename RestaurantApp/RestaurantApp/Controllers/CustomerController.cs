@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TastyDots.DataAccess;
+using RestaurantApp.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TastyDots.Models;
-using TastyDots.DataAccess.Repository;
+using RestaurantApp.Models;
+using RestaurantApp.DataAccess.Repository;
 
 namespace RestaurantApp.Controllers
 {
