@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TastyDots.Models
+namespace RestaurantApp.Models
 {
     public class Order
     {
