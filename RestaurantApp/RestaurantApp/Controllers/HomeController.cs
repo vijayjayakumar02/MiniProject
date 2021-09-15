@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using TastyDots.Models;
+using RestaurantApp.Models;
 
-namespace TastyDots.Controllers
+namespace RestaurantApp.Controllers
 {
     public class HomeController : Controller
     {
