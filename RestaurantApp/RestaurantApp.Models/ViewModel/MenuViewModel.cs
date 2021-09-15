@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TastyDots.Models.ViewModel
+namespace RestaurantApp.Models.ViewModel
 {
     public class MenuViewModel
     {
