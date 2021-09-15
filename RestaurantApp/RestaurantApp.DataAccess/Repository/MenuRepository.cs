@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TastyDots.DataAccess.Data;
-using TastyDots.Models;
+using RestaurantApp.DataAccess.Data;
+using RestaurantApp.Models;
 
-namespace TastyDots.DataAccess.Repository
+namespace RestaurantApp.DataAccess.Repository
 {
     public class MenuRepository : IMenuRepository
     {
