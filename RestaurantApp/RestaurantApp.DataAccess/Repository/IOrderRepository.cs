@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TastyDots.Models;
+using RestaurantApp.Models;
 
-namespace TastyDots.DataAccess.Repository
+namespace RestaurantApp.DataAccess.Repository
 {
     interface IOrderRepository: IGenericRepository<Order>
     {
